@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@drawable/themebg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WELCOME TO SHOPP HYH2"
+        android:textStyle="bold"
+        android:textColor="#0A53CC"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:paddingBottom="20dp" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:hint="Tên đăng nhập"
+        android:drawableLeft="@drawable/baseline_account_circle_24"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mật khẩu"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/baseline_lock_24"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng Nhập"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:background="@drawable/btn"
+        app:backgroundTint="@null"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng ký tài khoản mới"
+        android:textColor="#0027FF"
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        android:paddingTop="20dp" />
+    <TextView
+        android:id="@+id/tvForget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quên mật khẩu?"
+        android:textColor="#0027FF"
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        android:paddingTop="20dp" />
+</LinearLayout>

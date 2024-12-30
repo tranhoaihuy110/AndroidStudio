@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Toolbar with Back Icon -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#4C67F6">
+
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back"
+            android:contentDescription="Back"
+            app:tint="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Main Content in a Nested LinearLayout, positioned lower -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_below="@id/backIcon"
+        android:layout_above="@+id/addToCartButton"
+        tools:ignore="NotSibling">
+
+        <!-- Product Image with CardView for Rounded Corners -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <ImageView
+                android:id="@+id/productImageDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Product Name -->
+        <TextView
+            android:id="@+id/productNameDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp" />
+
+        <!-- Product Price -->
+        <TextView
+            android:id="@+id/productPriceDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/red"
+            android:padding="8dp"
+            android:textStyle="bold" />
+
+        <!-- Product Description -->
+        <TextView
+            android:id="@+id/productDescriptionDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:textColor="@color/gray" />
+
+        <!-- Product Stock -->
+        <TextView
+            android:id="@+id/productStockDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:textColor="@color/gray" />
+
+        <!-- Publish Date -->
+        <TextView
+            android:id="@+id/PublishDateDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Add to Cart Button -->
+    <Button
+        android:id="@+id/addToCartButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add to Cart"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/baseline_add_shopping_cart_24"
+        android:drawablePadding="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:textColor="@android:color/white"
+        android:padding="16dp"
+        android:background="@drawable/btn"
+        app:backgroundTint="@null"/>
+</RelativeLayout>
